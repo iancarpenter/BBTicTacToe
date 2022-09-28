@@ -46,6 +46,11 @@
                 turnNumber++;
             }
 
+            if (turnNumber == 9)
+            {
+                Console.WriteLine("It's a draw!");
+            }
+
         }
 
         private bool HasWon(Board board, Cell value)
@@ -128,7 +133,6 @@
             Console.WriteLine("---+---+---");
             Console.WriteLine($" {symbols[2, 0]} | {symbols[2, 1]} | {symbols[2, 2]}");        
     }
-
         private char GetCharacterFor(Cell cell) => cell switch { Cell.X => 'X', Cell.O => 'O', Cell.Empty => ' ' };
     }
 
